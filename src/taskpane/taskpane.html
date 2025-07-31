@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Event Tagger Task Pane</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script src="taskpane.js" type="text/javascript"></script>
+    <style>
+      body { font-family: sans-serif; margin: 20px; }
+      select, button { margin-top: 10px; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+      button { background-color: #0078d4; color: white; cursor: pointer; }
+      button:hover { background-color: #005ea6; }
+      #message { margin-top: 15px; color: green; }
+    </style>
+  </head>
+  <body>
+    <h1>Event Tagger Settings</h1>
+    <p>Select a category to automatically apply to new calendar events:</p>
+    <select id="categorySelect">
+      <option value="">-- Select a Category --</option>
+    </select>
+    <button id="saveButton">Save Setting</button>
+    <div id="message"></div>
+  </body>
+</html>
