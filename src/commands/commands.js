@@ -1,5 +1,3 @@
-const DEFAULT_CATEGORY = "MyDefaultTag"; // Pre-defined tag
-
 Office.onReady(function(info) {
   if (info.host === Office.HostType.Outlook) {
     // No UI initialization needed for commands.js
@@ -8,10 +6,19 @@ Office.onReady(function(info) {
 
 function onMessageSend(event) {
   Office.context.roamingSettings.getAsync('selectedCategory', function(asyncResult) {
-    let categoryToApply = DEFAULT_CATEGORY;
+    let categoryToApply = null; // Initialize as null
 
     if (asyncResult.status === Office.AsyncResultStatus.Succeeded && asyncResult.value) {
       categoryToApply = asyncResult.value;
+    }
+
+    if (!categoryToApply) {
+      // If no category is selected, prevent sending and inform the user
+      event.completed({
+        allowEvent: false,
+        errorMessage: "Please configure the Event Tagger add-in by selecting a category before sending. Click 'Configure Event Tagger' in the ribbon."
+      });
+      return; // Stop further execution
     }
 
     // Ensure the category exists in master categories before applying

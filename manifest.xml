@@ -13,7 +13,7 @@
   <Description DefaultValue="Automatically tags new calendar events." />
   <IconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
   <HighResolutionIconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
-  <SupportUrl DefaultValue="https://www.yourcompany.com/support" />
+  <SupportUrl DefaultValue="https://www.oneconsult.net/support" />
   <AppDomains>
     <AppDomain>https://nicolaetarla.github.io</AppDomain>
   </AppDomains>

@@ -1,6 +1,15 @@
 Office.onReady(function(info) {
   if (info.host === Office.HostType.Outlook) {
-    document.getElementById('saveButton').onclick = saveCategorySetting;
+    const saveButton = document.getElementById('saveButton');
+    const categorySelect = document.getElementById('categorySelect');
+
+    saveButton.onclick = saveCategorySetting;
+    saveButton.disabled = true; // Disable initially
+
+    categorySelect.onchange = function() {
+      saveButton.disabled = (categorySelect.value === "");
+    };
+
     loadCategories();
   }
 });
@@ -23,6 +32,9 @@ async function loadCategories() {
       Office.context.roamingSettings.getAsync('selectedCategory', function(asyncResult) {
         if (asyncResult.status === Office.AsyncResultStatus.Succeeded && asyncResult.value) {
           categorySelect.value = asyncResult.value;
+          document.getElementById('saveButton').disabled = false; // Enable if a category is already selected
+        } else {
+          document.getElementById('saveButton').disabled = true; // Keep disabled if no category is selected
         }
       });
     } else {
