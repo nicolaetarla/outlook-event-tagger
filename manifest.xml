@@ -11,11 +11,11 @@
   <ProviderName>Your Company</ProviderName>
   <DisplayName DefaultValue="Event Tagger" />
   <Description DefaultValue="Automatically tags new calendar events." />
-  <IconUrl DefaultValue="https://i.imgur.com/2Q4Q4Q4.png" />
-  <HighResolutionIconUrl DefaultValue="https://i.imgur.com/2Q4Q4Q4.png" />
+  <IconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
+  <HighResolutionIconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
   <SupportUrl DefaultValue="https://www.yourcompany.com/support" />
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://nicolaetarla.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox" />
@@ -28,7 +28,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+        <SourceLocation DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/taskpane/taskpane.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -82,15 +82,15 @@
     </Hosts>
     <Resources>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/taskpane/taskpane.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/commands/commands.html" />
       </bt:Urls>
       <bt:String id="TaskpaneButton.Label" DefaultValue="Configure Event Tagger" />
       <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Configure settings for the Event Tagger add-in." />
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://i.imgur.com/2Q4Q4Q4.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://i.imgur.com/2Q4Q4Q4.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://i.imgur.com/2Q4Q4Q4.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
       </bt:Images>
     </Resources>
   </VersionOverrides>
