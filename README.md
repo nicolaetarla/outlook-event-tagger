@@ -4,13 +4,13 @@ This Outlook add-in automatically tags newly created calendar events with a user
 
 ## Functionality
 
-- **Automatic Tagging**: When a new calendar event is created and sent/saved, the add-in automatically applies a specified Outlook category to it.
-- **User-Defined Tag**: Users can select an existing Outlook category from a list within the add-in's task pane. This selected category will then be used for all subsequent new events.
-- **Pre-defined Default Tag**: If the user does not explicitly select a category, a pre-defined default category (`"MyDefaultTag"`) will be used. This can be configured directly in the `src/commands/commands.js` file.
+- **Mandatory Category Selection**: Upon first use or if no category is configured, the add-in will prompt the user to select an Outlook category before an event can be sent or saved.
+- **Automatic Tagging**: Once configured, the add-in automatically applies the selected Outlook category to newly created, saved, or sent calendar events.
+- **User-Defined Tag**: Users select an existing Outlook category from a list within the add-in's task pane. This selected category will then be used for all subsequent new events.
 
 ## How it Works
 
-The plugin leverages Outlook's Event-based Activation feature, specifically the `ItemSend` event. When a user creates a new calendar event and attempts to send or save it, the `onMessageSend` function in `src/commands/commands.js` is triggered. This function retrieves the user's preferred category (from roaming settings or the default) and applies it to the event before it is sent.
+The plugin leverages Outlook's Event-based Activation feature, specifically the `ItemSend`, `ItemSave`, and `ItemNew` events. When a user creates, saves, or sends a new calendar event, the `onCalendarEvent` function in `src/commands/commands.js` is triggered. This function retrieves the user's preferred category (from roaming settings) and applies it to the event. If no category is configured, the event will not be sent/saved, and the user will be prompted to configure the add-in.
 
 ## Project Structure
 
@@ -59,5 +59,4 @@ To use and test this add-in, you need to sideload it into your Outlook client. T
 
 ## Customization
 
-- **Default Category**: You can change the `DEFAULT_CATEGORY` in `src/commands/commands.js` to any string you prefer. This will be used if the user has not explicitly selected a category via the task pane.
 - **Icons**: Update the `IconUrl` and `HighResolutionIconUrl` in `manifest.xml` to your preferred icon URLs.
