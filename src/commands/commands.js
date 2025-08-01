@@ -4,7 +4,7 @@ Office.onReady(function(info) {
   }
 });
 
-function onMessageSend(event) {
+function onCalendarEvent(event) {
   Office.context.roamingSettings.getAsync('selectedCategory', function(asyncResult) {
     let categoryToApply = null; // Initialize as null
 
@@ -60,4 +60,4 @@ function applyCategoryToItem(category, event) {
 // This is required by the Office.js runtime for event-based activation
 // It makes the onMessageSend function globally accessible.
 // @ts-ignore
-Office.actions.associate("onMessageSend", onMessageSend);
+Office.actions.associate("onCalendarEvent", onCalendarEvent);

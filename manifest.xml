@@ -73,7 +73,9 @@
           </ExtensionPoint>
           <ExtensionPoint xsi:type="LaunchEvent">
             <LaunchEvents>
-              <LaunchEvent Type="ItemSend" FunctionName="onMessageSend" />
+              <LaunchEvent Type="ItemSend" FunctionName="onCalendarEvent" />
+              <LaunchEvent Type="ItemSave" FunctionName="onCalendarEvent" />
+              <LaunchEvent Type="ItemNew" FunctionName="onCalendarEvent" />
             </LaunchEvents>
             <SourceLocation resid="Commands.Url" />
           </ExtensionPoint>
