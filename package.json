@@ -1,0 +1,22 @@
+{
+  "name": "outlook-event-tagger",
+  "version": "1.0.0",
+  "description": "An Outlook add-in that automatically tags new calendar events with a user-defined category.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -S -C cert.pem -K key.pem -p 3000",
+    "lint": "echo \"No linting configured yet.\""
+  },
+  "keywords": [
+    "Outlook",
+    "Add-in",
+    "Calendar",
+    "Tagging",
+    "Office Add-ins"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

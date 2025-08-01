@@ -36,7 +36,7 @@ To use and test this add-in, you need to sideload it into your Outlook client. T
     npm install -g http-server
 
     # Navigate to the root of this project
-    cd /Users/ntarla/CODE/outlook-event-tagger
+    cd /Users/username/CODE/outlook-event-tagger
 
     # Generate a self-signed certificate (if you don't have one)
     # For development, you can use mkcert or openssl

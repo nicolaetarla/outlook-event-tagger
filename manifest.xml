@@ -8,8 +8,8 @@
   >
   <Id>7f445d7a-acd1-4d5e-af3d-1cc8f77d3ebd</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Your Company</ProviderName>
-  <DisplayName DefaultValue="Event Tagger" />
+  <ProviderName>ONEConsult.net</ProviderName>
+  <DisplayName DefaultValue="Outlook Event Tagger" />
   <Description DefaultValue="Automatically tags new calendar events." />
   <IconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
   <HighResolutionIconUrl DefaultValue="https://nicolaetarla.github.io/outlook-event-tagger/src/assets/icon.png" />
